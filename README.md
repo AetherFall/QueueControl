@@ -1,4 +1,8 @@
-# QueueControl - Application MAUI x Blazor pour la Gestion des Impressions sous Windows
+# QueueControl
+## Application MAUI x Blazor pour la Gestion des Impressions sous Windows
+![Stability-WIP](https://img.shields.io/badge/Stability-Travaux%20en%20cours-lightgrey.svg)
+[![Join-Discord](https://img.shields.io/badge/Discord-Joindre%20le%20serveur-darkviolet.svg)](https://discord.gg/qmHVkUTn)
+
 
 ## Description
 
