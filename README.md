@@ -22,7 +22,13 @@ cela n'égale pas la qualité et la facilité que peut produire un driver. Par c
 - Interface utilisateur développée avec MAUI x Blazor.
 - Stockage des requêtes d'impression dans une base de données.
 
-### Infrastucture based on [MauiCleanTodos](https://github.com/matt-goldman/MauiCleanTodos)
+## Aide et support extérieur
+### Github
+- [MauiCleanTodos](https://github.com/matt-goldman/MauiCleanTodos)
+- [BlazorHero Clean Architecture Template](https://github.com/fullstackhero/blazor-starter-kit/tree/master)
+
+### Conseiller
+- [Solution Crescendo](https://www.crescendo-solutions.ca/)
 
 ## Installation
 
