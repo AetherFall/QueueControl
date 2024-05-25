@@ -1,0 +1,12 @@
+.swagger-ui .topbar {
+    background-color: #0F172A;
+    border-bottom: 1px solid #0F172A;
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label span {
+    display:none;
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label {
+    width:40%;
+}
