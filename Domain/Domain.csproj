@@ -8,8 +8,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
-      <ProjectReference Include="..\Shared\Shared.csproj" />
+      <Folder Include="Services\" />
     </ItemGroup>
 
 </Project>

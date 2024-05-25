@@ -66,4 +66,8 @@
         <PackageReference Include="Scrutor" Version="4.2.2" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
+    </ItemGroup>
+
 </Project>
