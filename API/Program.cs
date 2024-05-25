@@ -1,5 +1,7 @@
 using Infrastructure.Configuration;
+using Infrastructure.Context;
 using Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,7 +28,6 @@ builder.Services.AddSwaggerGen( options =>
     })
 );
 
-// Enregistrer les services de l'application
 builder.Services.Scan(scan => scan
     .FromApplicationDependencies(app => app.FullName.StartsWith("Application") || app.FullName.StartsWith("Infrastructure"))
     .AddClasses(classes => classes.Where(type => type.Name.EndsWith("Service")))
@@ -43,9 +44,9 @@ var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
 {
-    var services = scope.ServiceProvider;
-    
-    DatabaseSeeder.Seed(services);
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
+    dbContext.Database.Migrate();
+    //DatabaseSeeder.Seed(scope.ServiceProvider);
 }
 
 
@@ -54,12 +55,18 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "QueueControl API v1");
+        options.InjectStylesheet("/swagger-ui/custom.css");
+        options.RoutePrefix = string.Empty;
+    });
 }
 
 app.UseHttpsRedirection();
 
 app.UseRouting();
+app.UseStaticFiles();
 
 app.UseAuthorization();
 

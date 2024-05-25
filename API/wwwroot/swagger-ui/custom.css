@@ -4,9 +4,80 @@
 }
 
 .swagger-ui .topbar .download-url-wrapper .select-label span {
-    display:none;
+    display: none;
 }
 
 .swagger-ui .topbar .download-url-wrapper .select-label {
-    width:40%;
+    width: 40%;
+}
+
+.swagger-ui img {
+    content: url(../assets/OriginalLogo.svg);
+    filter: brightness(100);
+}
+
+.swagger-ui .topbar .download-url-wrapper .select-label select {
+    border-color: #ff034a;
+}
+
+.info__contact a.link {
+    display: inline-block;
+    padding: 4px 10px;
+    /*margin: 10px 0;*/
+    font-size: 12px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: darkviolet;
+    border: 1px solid darkviolet;
+    border-radius: 7px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    transition: background-color 0.1s ease;
+}
+
+.info__contact a.link:hover {
+    background-color: #8b008b;
+    border-color: #8b008b;
+    color:#FFF;
+}
+
+.info__contact a.link:active {
+    background-color: #4b0082;
+    border-color: #4b0082;
+}
+
+.info a[href*="/swagger/v1/swagger.json"] {
+    display:none;
+}
+
+.info__license {
+    font-style:italic;
+}
+.info__license a {
+    color: darkviolet;
+}
+
+.swagger-ui .opblock.opblock-get .opblock-summary-method {
+    background-color: #3e679b;
+}
+
+.swagger-ui .opblock.opblock-get {
+    border-color: #3e679b;
+}
+
+.swagger-ui .opblock.opblock-delete .opblock-summary-method {
+    background-color: #f93e73;
+}
+
+.swagger-ui .opblock.opblock-delete {
+     border-color: #f93e73;
+}
+
+.swagger-ui .opblock.opblock-post .opblock-summary-method {
+    background-color: #49ccad;
+}
+
+.swagger-ui .opblock.opblock-post {
+     border-color: #49ccad;
 }
