@@ -3,14 +3,12 @@ using Shared.Models;
 
 namespace Infrastructure.Context;
 
-public class ApplicationContext : DbContext
+public class ApplicationContext(DbContextOptions<ApplicationContext> options) : DbContext(options)
 {
-    public ApplicationContext(DbContextOptions<ApplicationContext> options) : base(options) { }
-
-    public DbSet<Printer?> Printers { get; set; }
-    public DbSet<PrintType?> PrintTypes { get; set; }
-    public DbSet<PrintDocument?> PrintDocuments { get; set; }
-    public DbSet<PrintQueue?> PrintQueues { get; set; }
+    public DbSet<Printer> Printers { get; set; } = null!;
+    public DbSet<PrintType> PrintTypes { get; set; } = null!;
+    public DbSet<PrintDocument> PrintDocuments { get; set; } = null!;
+    public DbSet<PrintQueue> PrintQueues { get; set; } = null!;
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -46,7 +46,7 @@ using (var scope = app.Services.CreateScope())
 {
     var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationContext>();
     dbContext.Database.Migrate();
-    //DatabaseSeeder.Seed(scope.ServiceProvider);
+    DatabaseSeeder.Seed(scope.ServiceProvider);
 }
 
 
